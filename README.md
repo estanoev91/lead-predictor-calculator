@@ -31,3 +31,5 @@ Open `index.html` in the browser.
 This is a static project. Deploy the whole folder to Netlify.
 Build command is not needed.
 Publish directory: `/` or project root.
+Layout created.
+Layout section added.
