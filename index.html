@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeadPredictor Calculator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">▼</div>
+        <h1>LeadPredictor</h1>
+      </div>
+
+      <section class="panel controls">
+        <label>
+          <span>Language</span>
+          <select id="language">
+            <option>🇺🇸 English</option>
+            <option>🇧🇬 Bulgarian</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Currency</span>
+          <select id="currency">
+            <option value="$">$ US Dollar</option>
+            <option value="€">€ Euro</option>
+            <option value="лв.">лв. Bulgarian Lev</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Campaign Start</span>
+          <input id="startDate" type="date" value="2026-05-08" />
+        </label>
+
+        <label>
+          <span>Campaign End</span>
+          <input id="endDate" type="date" value="2026-11-04" />
+        </label>
+
+        <label>
+          <span>Total Revenue</span>
+          <div class="money-input">
+            <span id="revenueCurrency">$</span>
+            <input id="revenue" type="number" min="1" value="10000" />
+          </div>
+        </label>
+
+        <label>
+          <span>Avg. Order Value</span>
+          <div class="money-input">
+            <span id="orderCurrency">$</span>
+            <input id="avgOrder" type="number" min="1" value="1000" />
+          </div>
+        </label>
+      </section>
+    </aside>
+
+    <section class="dashboard">
+      <section class="panel chart-card">
+        <div class="chart-wrap">
+          <div class="axis-title">Months</div>
+          <div id="chart" class="chart"></div>
+        </div>
+
+        <div class="stats">
+          <article class="stat-card">
+            <div class="stat-header">
+              <span class="icon">▣</span>
+              <span>Prospects</span>
+              <strong id="prospectPercent">100%</strong>
+            </div>
+            <div id="prospectsValue" class="stat-number">125</div>
+            <div class="progress"><span id="prospectsBar"></span></div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <span class="icon">●</span>
+              <span>Leads</span>
+              <strong id="leadPercentLabel">20%</strong>
+            </div>
+            <div id="leadsValue" class="stat-number">25</div>
+            <div class="progress"><span id="leadsBar"></span></div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <span class="icon">★</span>
+              <span>Customers</span>
+              <strong id="customerPercentLabel">8%</strong>
+            </div>
+            <div id="customersValue" class="stat-number">10</div>
+            <div class="progress"><span id="customersBar"></span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel sliders">
+        <label>
+          <span>Lead Response Rate</span>
+          <input id="leadRate" type="range" min="1" max="100" value="40" />
+          <output id="leadRateValue">40.00%</output>
+        </label>
+
+        <label>
+          <span>Prospect Response Rate</span>
+          <input id="prospectRate" type="range" min="1" max="100" value="20" />
+          <output id="prospectRateValue">20.00%</output>
+        </label>
+      </section>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
