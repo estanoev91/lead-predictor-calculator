@@ -33,3 +33,4 @@ Build command is not needed.
 Publish directory: `/` or project root.
 Layout created.
 Layout section added.
+Sliders update the calculation instantly.
